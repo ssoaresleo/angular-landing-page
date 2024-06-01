@@ -12,7 +12,7 @@ type BtnVariants = 'primary' | 'secondary';
 })
 export class BtnPrimaryComponent {
   @Input('btn-text') btnText: string = '';
-  @Output('submit') onSubmit = new EventEmitter();
+  @Output('submit') onSubmit: EventEmitter<SubmitEvent> = new EventEmitter();
   @Input() disabled: boolean = false;
   @Input() loading: boolean = false;
   @Input() variant: BtnVariants = 'primary';
